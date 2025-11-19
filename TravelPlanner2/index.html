@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Planner Pro</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <h1>Travel Planner 🗺️</h1>
+        </div>
+    </header>
+
+    <main class="main-content container">
+        
+        <section class="card controls-card">
+            <h2>Plan Your Trip</h2>
+            <form id="routeForm">
+                <div class="form-group autocomplete-wrapper">
+                    <label for="source">From</label>
+                    <input type="text" id="source" placeholder="E.g., Delhi" required>
+                    <div class="autocomplete-items" id="source-autocomplete"></div>
+                </div>
+                
+                <div class="form-group autocomplete-wrapper">
+                    <label for="destination">To</label>
+                    <input type="text" id="destination" placeholder="E.g., Jaipur" required>
+                    <div class="autocomplete-items" id="destination-autocomplete"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Find Route By:</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="calcType" value="distance" checked>
+                            <span class="radio-custom"></span>
+                            Distance (km)
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="calcType" value="cost">
+                            <span class="radio-custom"></span>
+                            Cost (Rs)
+                        </label>
+                    </div>
+                </div>
+                
+                <button type="submit" id="submitButton" class="button-primary">
+                    Find Shortest Route
+                </button>
+            </form>
+
+            <hr style="margin: 25px 0; border-color: var(--border-color);">
+            
+            <h2>Add New Route</h2>
+            <form id="addCityForm">
+                <div class="form-group autocomplete-wrapper">
+                    <label for="newSource">From</label>
+                    <input type="text" id="newSource" placeholder="E.g., Delhi" required>
+                    <div class="autocomplete-items" id="newSource-autocomplete"></div>
+                </div>
+                <div class="form-group">
+                    <label for="newSourceLat">Source Latitude</label>
+                    <input type="number" step="any" id="newSourceLat" placeholder="E.g., 28.7041" required>
+                </div>
+                <div class="form-group">
+                    <label for="newSourceLon">Source Longitude</label>
+                    <input type="number" step="any" id="newSourceLon" placeholder="E.g., 77.1025" required>
+                </div>
+
+                <div class="form-group autocomplete-wrapper">
+                    <label for="newDestination">To</label>
+                    <input type="text" id="newDestination" placeholder="E.g., Agra" required>
+                    <div class="autocomplete-items" id="newDestination-autocomplete"></div>
+                </div>
+                <div class="form-group">
+                    <label for="newDestLat">Destination Latitude</label>
+                    <input type="number" step="any" id="newDestLat" placeholder="E.g., 27.1767" required>
+                </div>
+                <div class="form-group">
+                    <label for="newDestLon">Destination Longitude</label>
+                    <input type="number" step="any" id="newDestLon" placeholder="E.g., 78.0081" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="newDistance">Distance (km)</label>
+                    <input type="number" id="newDistance" placeholder="E.g., 200" min="0" required>
+                </div>
+                <div class="form-group">
+                    <label for="newCost">Cost ($)</label>
+                    <input type="number" id="newCost" placeholder="E.g., 25" min="0" required>
+                </div>
+                <button type="submit" id="addCityButton" class="button-primary">
+                    Add Route to File
+                </button>
+                <div id="addCityResult" style="margin-top: 10px; font-weight: bold;"></div>
+            </form>
+
+        </section>
+
+        <section class="card results-card">
+            <h2>Your Route</h2>
+            <div id="result">
+                <p class="placeholder">Your route and map will appear here once you search.</p>
+            </div>
+            <div id="map"></div>
+        </section>
+
+    </main>
+    
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
