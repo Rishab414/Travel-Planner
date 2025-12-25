@@ -58,17 +58,14 @@ TravelPlanner2/
 
 
 
-**Customize Chat Page**
+**Shortest Route using Cost**
 
-![Customize](https://github.com/Surajrawat1709/UttarakhandSpeaksAI/assets/60563826/b4245f4f-9d71-4c11-85eb-e075c91060a3)
+<img width="1917" height="867" alt="image" src="https://github.com/user-attachments/assets/220fab61-ef83-4f3c-a040-97d2793a47fa" />
 
-**Chat Page**
+**Shortest Route using Distance**
 
-![Chat Page](https://github.com/Surajrawat1709/UttarakhandSpeaksAI/assets/60563826/080d771d-58ef-4056-8633-865b17316997)
+<img width="1919" height="909" alt="image" src="https://github.com/user-attachments/assets/f28b22ff-7d75-4d4e-ba0c-84a10ff1e4d8" />
 
-**SignUp/Login Page**
-
-![Login Page](https://github.com/Surajrawat1709/UttarakhandSpeaksAI/assets/60563826/498d65e8-2404-47f4-be4c-97ecb596a827)
 
 ## Getting Started
 
