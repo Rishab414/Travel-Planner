@@ -54,7 +54,8 @@ TravelPlanner2/
 
 **Landing Page**
 
-![Landing Page](https://github.com/Surajrawat1709/UttarakhandSpeaksAI/assets/60563826/3cff9062-7113-4251-b13d-f50d713f0d1a )
+<img width="1918" height="1020" alt="image" src="https://github.com/user-attachments/assets/b3dfdcb3-aad6-4404-b20f-60117404b083" />
+
 
 
 **Customize Chat Page**
